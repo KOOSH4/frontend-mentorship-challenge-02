@@ -19,16 +19,19 @@
       <section id="form-wraper">
         <div class="form-group">
           <div class="form-input">
-            <label for="user" class="username-label">Username</label>
-            <input id="user" type="text" class="input" />
+            <label for="user" class="username-label">Full Name</label>
+            <input id="user" type="text" class="input" required />
           </div>
           <div class="form-input">
-            <label for="email" class="email-label">Email</label>
-            <input id="email" type="text" class="input" />
+            <label for="email" class="email-label"
+              >Email
+              <address></address
+            ></label>
+            <input id="email" type="text" class="input" required />
           </div>
           <div class="form-input">
             <label for="date">Date Of Birth</label>
-            <input type="date" name="dateofbirth" class="input" />
+            <input type="date" name="dateofbirth" class="input" required />
           </div>
           <div class="form-input">
             <div><label for="male" class="input">Gender</label></div>
@@ -51,7 +54,7 @@
           </div>
           <div class="form-input">
             <div>
-              <input type="checkbox" id="terms" />
+              <input type="checkbox" id="terms" required />
               <label for="terms" class="input"
                 >I accept the Terms & Conditions</label
               >
