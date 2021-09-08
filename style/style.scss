@@ -1,5 +1,5 @@
 @import url(./reset.css);
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 @mixin Flexes($direction, $justify, $align) {
     display: flex;
     flex-direction: $direction;
@@ -11,6 +11,12 @@ $boxtransColor: #404e7452;
 $textColor: #272727;
 $btntextColor: #d3d3d3;
 $borderColor: #d3d3d3bb;
+$formColor: #e7e7e7;
+$inputplaceholdercolor: #bebebe;
+body{
+    font-family: 'Roboto', sans-serif;
+    color:$textColor;
+}
 main {
     width: 100vw;
     height: 100vh;
@@ -29,15 +35,17 @@ main {
         @include Flexes(column, center, center);
     }
 }
-#form-group {
+.form-group {
+    width:100%;
+    overflow:hidden;
     @include Flexes(column, center, flex-start);
 }
 
 .form-input{
-
+    width: 80%;
     margin: 1rem;
-    
     padding: 0.5rem;
+    
     @include Flexes(column, center, flex-start);
     label{
         margin:0.5rem 0; 
@@ -45,19 +53,49 @@ main {
     input{
         margin:0 0.5rem 0 0;
     }
-    .gender-select{
-        margin:0.5rem 0;
+    input[type=text] {
+        width:100%;
+        height: 2.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
         
+      }
+    input[type=date] {
+        width:100%;
+        height: 2.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+      div{
+        input[type=checkbox] {
+            outline: none;
+            
+        }
+      }
+    .gender-select{
+        width: 80%;
+        margin:0.5rem 0 ;
         @include Flexes(row, flex-start, flex-start);
+        flex-wrap: nowrap;
         div{
+            width: 40%;
             margin: 0 0.5rem 0 0;
-            padding: 0.6rem;
+            padding: 0.6rem 1rem;
+            background-color: #d3d3d3;
+            border-radius: 15px;
+            @include Flexes(row, flex-start, flex-start);
         }
         input{
             margin: 0.5rem  0.5rem 0.5rem 0;
         }
     }
 }
+//  ===== button ======  
 .submit-btn{
     margin: 1rem;
     padding: 0.5rem;
@@ -85,9 +123,111 @@ main {
       }
       .create-acc-btn:hover {
         background: #fff;
-        color: red;
         input{
             color: $textColor
         }
       }
+}
+
+//  ===== media queries ======
+// ipad=======  
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: portrait) 
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    #form-wraper
+    {
+    width:90%;
+    @include Flexes(column, center, center);
+    }
+    .form-group
+    {
+        @include Flexes(column, center, center);
+    width:100%;
+    }
+    .form-group
+    {
+    width:80%;
+    }
+    input[type=text] {
+        width:100%;
+        height: 2.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+      input[type=date] {
+        width:100%;
+        height: 2.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+    .gender-select{
+        width: 80%;
+        margin:0.5rem 0;
+        @include Flexes(column,center, flex-start);
+        }
+        
+}
+// ipad pro =========  
+
+// iphone ========== 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    #form-wraper
+    {
+    width:90%;
+    @include Flexes(column, center, center)
+    }
+    .form-group
+    {
+        @include Flexes(column, center, center);
+    width:100%;
+    }
+    .form-group
+    {
+    width:80%;
+    }
+    .form-input{
+        margin:0;
+    }
+    input[type=text] {
+        width:100%;
+        height: 2.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+      input[type=date] {
+        width:100%;
+        height: 2.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+    .gender-select{
+        width: 80%;
+        
+        }
+        .form-input .gender-select{
+            @include Flexes(column, center, flex-start);
+        }
+        .form-input .gender-select div {
+            margin: 0.3rem 0 0.3rem 0;
+        }
 }
