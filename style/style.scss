@@ -6,13 +6,11 @@
     justify-content: $justify;
     align-items: $align;
 }
-$purpleColor: #358cd3;
-$dakBlue: #192a56;
+$blueColor: #358cd3;
+$boxtransColor: #404e7452;
 $textColor: #272727;
-$linkColor: #743afa;
-$blueGradient: #56c9ffa4;
-$pinkHeader: #b74f6f;
-$btnColor: black;
+$btntextColor: #d3d3d3;
+$borderColor: #d3d3d3bb;
 main {
     width: 100vw;
     height: 100vh;
@@ -22,4 +20,74 @@ main {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    @include Flexes(column, center, center);
+    section{
+        border: solid 1px $borderColor;
+        width: 30%;
+        background-color: $boxtransColor;
+        border-radius: 20px;
+        @include Flexes(column, center, center);
+    }
+}
+#form-group {
+    @include Flexes(column, center, flex-start);
+}
+
+.form-input{
+
+    margin: 1rem;
+    
+    padding: 0.5rem;
+    @include Flexes(column, center, flex-start);
+    label{
+        margin:0.5rem 0; 
+    }
+    input{
+        margin:0 0.5rem 0 0;
+    }
+    .gender-select{
+        margin:0.5rem 0;
+        
+        @include Flexes(row, flex-start, flex-start);
+        div{
+            margin: 0 0.5rem 0 0;
+            padding: 0.6rem;
+        }
+        input{
+            margin: 0.5rem  0.5rem 0.5rem 0;
+        }
+    }
+}
+.submit-btn{
+    margin: 1rem;
+    padding: 0.5rem;
+    .create-acc-btn {
+        min-width: 130px;
+        height: 40px;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 20px;
+        border: 2px solid $blueColor;
+        background: $blueColor;
+        input{
+            background-color: transparent;
+            outline: none;
+            border:0;
+            color: $btntextColor;
+        }
+        
+      }
+      .create-acc-btn:hover {
+        background: #fff;
+        color: red;
+        input{
+            color: $textColor
+        }
+      }
 }
