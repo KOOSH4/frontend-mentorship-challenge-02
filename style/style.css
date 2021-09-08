@@ -195,7 +195,7 @@ main section {
 }
 
 .submit-btn .create-acc-btn:hover {
-  background: #fff;
+  background: transparent;
 }
 
 .submit-btn .create-acc-btn:hover input {
