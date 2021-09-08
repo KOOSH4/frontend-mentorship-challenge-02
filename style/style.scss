@@ -7,12 +7,12 @@
     align-items: $align;
 }
 $blueColor: #358cd3;
-$boxtransColor: #404e7452;
-$textColor: #272727;
+$boxtransColor: #ffffff46;
+$textColor: #3b3b3b;
 $btntextColor: #d3d3d3;
 $borderColor: #d3d3d3bb;
 $formColor: #e7e7e7;
-$inputplaceholdercolor: #bebebe;
+$inputplaceholdercolor: #353535;
 body{
     font-family: 'Roboto', sans-serif;
     color:$textColor;
@@ -26,6 +26,8 @@ main {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
     @include Flexes(column, center, center);
     section{
         border: solid 1px $borderColor;
@@ -86,7 +88,7 @@ main {
             width: 40%;
             margin: 0 0.5rem 0 0;
             padding: 0.6rem 1rem;
-            background-color: #d3d3d3;
+            background-color: $formColor;
             border-radius: 15px;
             @include Flexes(row, flex-start, flex-start);
         }
@@ -231,3 +233,15 @@ and (-webkit-min-device-pixel-ratio: 1) {
             margin: 0.3rem 0 0.3rem 0;
         }
 }
+// ======== keyframes =======  
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
