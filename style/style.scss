@@ -7,6 +7,7 @@
     align-items: $align;
 }
 $blueColor: #358cd3;
+$borderColortrans: #ffffff00;
 $boxtransColor: #ffffff46;
 $textColor: #3b3b3b;
 $btntextColor: #d3d3d3;
@@ -60,12 +61,19 @@ main {
     }
     input[type=text],input[type=date], input[type=email]{
         width:100%;
+        margin:0 0 5px;
         height: 2.5rem;
         border-radius: 10px;
         background-color: $formColor;
         outline: none;
-        border: 0;
+        border: 1px solid $borderColortrans;
         color: $inputplaceholdercolor;
+        transition: all 0.30s ease-in-out
+      }
+      input[type=text]:focus,input[type=date]:focus, input[type=email]:focus{
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        border: 1px solid rgba(81, 203, 238, 1);
+        
       }
       div{
         input[type=checkbox] {

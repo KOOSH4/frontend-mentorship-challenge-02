@@ -103,12 +103,21 @@ main section {
 
 .form-input input[type=text], .form-input input[type=date], .form-input input[type=email] {
   width: 100%;
+  margin: 0 0 5px;
   height: 2.5rem;
   border-radius: 10px;
   background-color: #97cdff69;
   outline: none;
-  border: 0;
+  border: 1px solid #ffffff00;
   color: #353535;
+  -webkit-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+
+.form-input input[type=text]:focus, .form-input input[type=date]:focus, .form-input input[type=email]:focus {
+  -webkit-box-shadow: 0 0 5px #51cbee;
+          box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
 }
 
 .form-input div input[type=checkbox] {
