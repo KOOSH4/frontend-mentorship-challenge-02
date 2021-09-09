@@ -5,6 +5,10 @@ body {
   color: #3b3b3b;
 }
 
+fieldset {
+  border: none;
+}
+
 main {
   width: 100vw;
   height: 100vh;
@@ -157,8 +161,21 @@ main section {
 }
 
 .submit-btn {
-  margin: 1rem;
-  padding: 0.5rem;
+  width: 100%;
+  margin: 1.5rem 0 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .submit-btn .create-acc-btn {

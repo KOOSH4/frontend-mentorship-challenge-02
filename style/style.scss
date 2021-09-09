@@ -17,6 +17,9 @@ body{
     font-family: 'Roboto', sans-serif;
     color:$textColor;
 }
+fieldset{
+  border: none;
+}
 main {
     width: 100vw;
     height: 100vh;
@@ -91,8 +94,9 @@ main {
 }
 //  ===== button ======  
 .submit-btn{
-    margin: 1rem;
-    padding: 0.5rem;
+    width: 100%;
+    margin: 1.5rem 0 1.5rem 0;
+    @include Flexes(row, center, center);
     .create-acc-btn {
         min-width: 130px;
         height: 40px;
