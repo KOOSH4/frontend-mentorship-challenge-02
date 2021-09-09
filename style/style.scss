@@ -9,11 +9,11 @@
 $blueColor: #358cd3;
 $checkboxColor: #9e9e9e;
 $borderColortrans: #ffffff00;
-$boxtransColor: #ffffff46;
+$boxtransColor: #def6fc85;
 $textColor: #3b3b3b;
 $btntextColor: #d3d3d3;
 $borderColor: #d3d3d3bb;
-$formColor: #97cdff69;
+$formColor: #ffffff6e;
 $inputplaceholdercolor: #353535;
 body{
     font-family: 'Roboto', sans-serif;
@@ -32,7 +32,7 @@ main {
     background-attachment: fixed;
     background-size: cover;
     background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 120s ease infinite;
     @include Flexes(column, center, center);
     section{
         border: solid 1px $borderColor;

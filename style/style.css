@@ -19,8 +19,8 @@ main {
   background-attachment: fixed;
   background-size: cover;
   background-size: 200% 200%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  -webkit-animation: gradient 120s ease infinite;
+          animation: gradient 120s ease infinite;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +39,7 @@ main {
 main section {
   border: solid 1px #d3d3d3bb;
   width: 30%;
-  background-color: #ffffff46;
+  background-color: #def6fc85;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,7 +107,7 @@ main section {
   height: 2.5rem;
   text-indent: 0.5rem;
   border-radius: 10px;
-  background-color: #97cdff69;
+  background-color: #ffffff6e;
   outline: none;
   border: 1px solid #ffffff00;
   color: #353535;
@@ -149,7 +149,7 @@ main section {
   width: 40%;
   margin: 0 0.5rem 0 0;
   padding: 0.6rem 1rem;
-  background-color: #97cdff69;
+  background-color: #ffffff6e;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,7 +261,7 @@ main section {
     height: 2.5rem;
     text-indent: 0.5rem;
     border-radius: 10px;
-    background-color: #97cdff69;
+    background-color: #ffffff6e;
     outline: none;
     border: 0;
     color: #353535;
@@ -329,7 +329,7 @@ main section {
     height: 2.5rem;
     border-radius: 10px;
     text-indent: 0.5rem;
-    background-color: #97cdff69;
+    background-color: #ffffff6e;
     outline: none;
     border: 0;
     color: #353535;
