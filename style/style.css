@@ -1,5 +1,11 @@
 @import url(./reset.css);
+@import url(./darkmode.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+html[theme="dark-mode"] {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #3b3b3b;
