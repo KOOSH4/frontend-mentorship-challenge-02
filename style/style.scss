@@ -15,16 +15,11 @@ $btntextColor: #d3d3d3;
 $borderColor: #d3d3d3bb;
 $formColor: #ffffff6e;
 $inputplaceholdercolor: #353535;
-html[theme="dark-mode"]{
-  filter: invert(1) hue-rotate(180deg);
-}
+
 body{
     font-family: 'Roboto', sans-serif;
     color:$textColor;
-}
-fieldset{
-  border: none;
-}
+
 main {
     width: 100vw;
     height: 100vh;
@@ -37,13 +32,19 @@ main {
     background-size: 200% 200%;
     animation: gradient 120s ease infinite;
     @include Flexes(column, center, center);
-    section{
-        border: solid 1px $borderColor;
-        width: 30%;
-        background-color: $boxtransColor;
-        border-radius: 20px;
-        @include Flexes(column, center, center);
-    }
+}
+// ======== Start Form Group ====== 
+#form-wraper{
+  border: solid 1px $borderColor;
+  min-width: 35%;
+  max-width: 50%;
+  background-color: $boxtransColor;
+  border-radius: 20px;
+  @include Flexes(column, center, center);
+}
+}
+fieldset{
+  border: none;
 }
 .form-group {
     width:100%;
@@ -105,7 +106,9 @@ main {
         }
     }
 }
-//  ===== button ======  
+// ======== End Form Group ======== 
+
+//  ===== start buttons Styles ======  
 .submit-btn{
     width: 100%;
     margin: 1.5rem 0 1.5rem 0;
@@ -139,19 +142,23 @@ main {
         }
       }
 }
+//  ===== End buttons Styles ======  
 
-//  ===== media queries ======
-// ipad=======  
+//  ===== Start media queries ======
+
+/* ----- iPad air ----- */
+
+/* Portrait and Landscape */
 @media only screen 
-and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
-and (orientation: portrait) 
-and (-webkit-min-device-pixel-ratio: 1) {
-
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
     #form-wraper
     {
-    width:90%;
-    @include Flexes(column, center, center);
+      min-width: 60%;
+      max-width: 70%;
+
+      @include Flexes(column, center, center);
     }
     .form-group
     {
@@ -177,21 +184,102 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin:0.5rem 0;
         @include Flexes(column,center, flex-start);
         }
-        
-}
-// ipad pro =========  
 
-// iphone ========== 
+}
+
+/* Portrait */
 @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #form-wraper
+    {
+      min-width: 60%;
+      max-width: 70%;
+
+      @include Flexes(column, center, center);
+    }
+    .form-group
+    {
+        @include Flexes(column, center, center);
+    width:100%;
+    }
+    .form-group
+    {
+    width:80%;
+    }
+    input[type=text],input[type=date],input[type=email] {
+        width:100%;
+        height: 2.5rem;
+        text-indent: 0.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+    .gender-select{
+        width: 80%;
+        margin:0.5rem 0;
+        @include Flexes(column,center, flex-start);
+        }
+
+}
+/* ----- iPad 3, 4 and Pro 9.7" ----- */
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #form-wraper
+    {
+      min-width: 60%;
+      max-width: 70%;
+
+      @include Flexes(column, center, center);
+    }
+    .form-group
+    {
+        @include Flexes(column, center, center);
+    width:100%;
+    }
+    .form-group
+    {
+    width:80%;
+    }
+    input[type=text],input[type=date],input[type=email] {
+        width:100%;
+        height: 2.5rem;
+        text-indent: 0.5rem;
+        border-radius: 10px;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+    .gender-select{
+        width: 80%;
+        margin:0.5rem 0;
+        @include Flexes(column,center, flex-start);
+        }
+
+}
+/* -----End iPad 3, 4 and Pro 9.7" ----- */
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
 
     #form-wraper
     {
-    width:90%;
-    @include Flexes(column, center, center)
+      min-width: 90%;
+      max-width:95%;
+      @include Flexes(column, center, center)
     }
     .form-group
     {
@@ -226,7 +314,71 @@ and (-webkit-min-device-pixel-ratio: 1) {
             margin: 0.3rem 0 0.3rem 0;
         }
 }
-// ======== keyframes =======  
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+    #form-wraper
+    {
+      min-width: 90%;
+      max-width:95%;
+      min-height: 90%;
+      max-height:95%;
+
+      @include Flexes(column, center, center)
+    }
+    .form-group
+    {
+        @include Flexes(column, center, center);
+    width:100%;
+    }
+    .form-group
+    {
+    width:80%;
+    }
+    .form-input{
+        margin:0;
+    }
+    input[type=text], input[type=date], input[type=email]  {
+        width:100%;
+        height: 2.5rem;
+        border-radius: 10px;
+        text-indent: 0.5rem;
+        background-color: $formColor;
+        outline: none;
+        border: 0;
+        color: $inputplaceholdercolor;
+      }
+    .gender-select{
+        width: 80%;
+        
+        }
+        .form-input .gender-select{
+            @include Flexes(row, center, flex-start);
+        }
+        .form-input .gender-select div {
+            margin: 0.3rem 0 0.3rem 0;
+        }
+}
+//  ===== End media queries ======
+
+
+
+// ======== Start keyframes =======  
 @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -238,3 +390,4 @@ and (-webkit-min-device-pixel-ratio: 1) {
       background-position: 0% 50%;
     }
   }
+  // ======== End keyframes =======  
